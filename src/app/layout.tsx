@@ -13,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-paper text-ink antialiased`}>
+      <body
+        suppressHydrationWarning
+        className={`${font.className} bg-paper text-ink antialiased`}
+      >
         <Providers>{children}</Providers>
         <Toaster richColors position="top-right" />
       </body>
